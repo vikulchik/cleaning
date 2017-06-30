@@ -43,7 +43,7 @@
               в труднодоступных местах
             </p>
           </li>
-          <li class="slider__item slider__item--main swiper-slide">
+          <li class="slider__item slider__item--main swiper-slide  swiper-slide-active">
             <h3 class="slider__description">Генеральная уборка</h3>
             <p class="slider__text">
               Целый комплекс работ
@@ -107,7 +107,7 @@
         </div>
         <h4 class="view">Ваш телефон</h4>
         <div class="phone">
-          <input type="tel" name="phone" class="phone__add" placeholder="(999) 123–45–78" required>
+          <input type="tel" id="phone"  name="phone" class="phone__add" placeholder="(999) 123–45–78" required>
           <span class="phone__code">+7</span>
         </div>
         <button type="submit" class="button order">Заказать в 1 клик</button>
@@ -120,12 +120,12 @@
             <div class="clean-list__section active-section ">
               <div class="clean-list__services">
                 <div class="list">
-                  <a href="#" class="clean-link active">Комнаты и коридор</a>
-                  <a href="#" class="clean-link">Ванная комната</a>
+                  <a href="#" class="clean-link active">Комнаты <span> и коридор</span></a>
+                  <a href="#" class="clean-link">Ванная <span> комната</span></a>
                 </div>
                 <div class="list">
                   <a href="#" class="clean-link">Кухня</a>
-                  <a href="#" class="clean-link">Дополнительные услуги</a>
+                  <a href="#" class="clean-link"><b>Доп. услуги</b><span>Дополнительные услуги</span></a>
                 </div>
               </div>
               <div class="clean-list__content">
@@ -193,12 +193,12 @@
             <div class="clean-list__section">
               <div class="clean-list__services">
                 <div class="list">
-                  <a href="#" class="clean-link active">Комнаты и коридор</a>
-                  <a href="#" class="clean-link">Ванная комната</a>
+                  <a href="#" class="clean-link active">Комнаты <span> и коридор</span></a>
+                  <a href="#" class="clean-link">Ванная <span> комната</span></a>
                 </div>
                 <div class="list">
                   <a href="#" class="clean-link">Кухня</a>
-                  <a href="#" class="clean-link">Дополнительные услуги</a>
+                  <a href="#" class="clean-link"><b>Доп. услуги</b><span>Дополнительные услуги</span></a>
                 </div>
               </div>
               <div class="clean-list__content">
@@ -222,12 +222,12 @@
             <div class="clean-list__section">
               <div class="clean-list__services">
                 <div class="list">
-                  <a href="#" class="clean-link active">Комнаты и коридор</a>
-                  <a href="#" class="clean-link">Ванная комната</a>
+                  <a href="#" class="clean-link active">Комнаты <span> и коридор</span></a>
+                  <a href="#" class="clean-link">Ванная <span> комната</span></a>
                 </div>
                 <div class="list">
                   <a href="#" class="clean-link">Кухня</a>
-                  <a href="#" class="clean-link">Дополнительные услуги</a>
+                  <a href="#" class="clean-link"><b>Доп. услуги</b><span>Дополнительные услуги</span></a>
                 </div>
               </div>
               <div class="clean-list__content">
@@ -326,7 +326,7 @@
             </td>
             <td class="price-list__count">0</td>
             <td class="price-list__info">
-              Один санузел входит в базовую стоимость
+              <span>Один санузел входит в базовую стоимость</span>
               <a href="#" class="price-list__button price-list__button--next">next</a>
             </td>
             <td class="price-list__last"></td>
@@ -338,7 +338,8 @@
             <td class="price-list__count">0</td>
             <td class="price-list__info">
               <a href="#" class="price-list__button price-list__button--next">next</a>
-              350 руб. / шт.</td>
+              <span>350 руб. / шт.</span>
+            </td>
             <td class="price-list__last"></td>
           </tr>
           <tr>
@@ -348,7 +349,7 @@
             <td class="price-list__count">0</td>
             <td class="price-list__info">
               <a href="#" class="price-list__button price-list__button--next">next</a>
-              350 руб. / шт.</td>
+              <span>350 руб. / шт.</span></td>
             <td class="price-list__last"></td>
           </tr>
           <tr>
@@ -358,7 +359,7 @@
             <td class="price-list__count">0</td>
             <td class="price-list__info">
               <a href="#" class="price-list__button price-list__button--next">next</a>
-              350 руб. / шт.</td>
+              <span>350 руб. / шт.</span></td>
             <td class="price-list__last"></td>
           </tr>
           <tr>
@@ -368,7 +369,7 @@
             <td class="price-list__count">0</td>
             <td class="price-list__info">
               <a href="#" class="price-list__button price-list__button--next">next</a>
-              200 руб. / шт.</td>
+              <span>200 руб. / шт.</span></td>
             <td class="price-list__last"></td>
           </tr>
           <tr>
@@ -378,17 +379,25 @@
             <td class="price-list__count">0</td>
             <td class="price-list__info">
               <a href="#" class="price-list__button price-list__button--next">next</a>
-              300 руб. / 30 мин</td>
+              <span>300 руб. / 30 мин</span></td>
             <td class="price-list__last"></td>
           </tr>
-          <tr>
-            <td class="price-list__text">
+          <tr class="price-list__information">
+            <td class="price-list__other" colspan="4">
+              <p class=" special__text">
+                Поменяем комплект белья,
+                оставленый вами в указанном месте.
+              </p>
+            </td>
+          </tr>
+          <tr class="price-list__underwear">
+            <td class="price-list__text ">
               <a href="#" class="price-list__button price-list__button--prew">prew</a>
               Поменять белье</td>
             <td class="price-list__count">0</td>
             <td class="price-list__info">
               <a href="#" class="price-list__button price-list__button--next">next</a>
-              150 руб. / шт.</td>
+              <span>150 руб. / шт.</span></td>
             <td class="price-list__last"></td>
           </tr>
           <tr>
@@ -398,7 +407,7 @@
             <td class="price-list__count">0</td>
             <td class="price-list__info">
               <a href="#" class="price-list__button price-list__button--next">next</a>
-              700 руб. / час</td>
+              <span>700 руб. / час</span></td>
             <td class="price-list__last"></td>
           </tr>
         </table>
@@ -419,29 +428,39 @@
         <div class="service-change">
           <div class="service-change__item">
             <div class="price-list__text">Эко-уборка</div>
-            <a href="#"class="service-change__link">Выбрать</a>
+            <a href="#" class="service-change__link">Выбрать</a>
             <span class="price-list__info">+40% к стоимости</span>
           </div>
           <div class="service-change__item">
             <div class="price-list__text">Парогенератор</div>
-            <a href="#"class="service-change__link">Выбрать</a>
+            <a href="#" class="service-change__link">Выбрать</a>
             <span class="price-list__info">+1500 к стоимости</span>
           </div>
           <div class="service-change__item">
             <div class="price-list__text">Заехать за ключами от квартиры</div>
-            <a href="#"class="service-change__reset">Отменить</a>
+            <a href="#" class="service-change__link">Выбрать</a>
+            <a href="#" class="service-change__reset">Отменить</a>
             <span class="price-list__info">300 рублей</span>
           </div>
         </div>
       </div>
       <div class="order-send">
+        <div class="order-result">
+          <p class="order-result__text">
+            Уборка квартиры с 1 жилой комнатой и одним санузлом
+          </p>
+          <p class="result-price__content">К оплате
+              <b class="result-price__number">1500</b>
+              <span>руб.</span>
+          </p>
+        </div>
         <form action="#" class="order-send__form" method="post">
           <p class="calculator__elements">Промокод <a href="#" class="info">?</a></p>
           <input type="text" name="promo" class="order-send__input" required>
           <p class="calculator__elements">Имя</p>
           <input type="text" name="name" class="order-send__input" placeholder="Ваше имя" required>
           <p class="calculator__elements">Телефон</p>
-          <input type="tel" name="tel" class="order-send__input" required>
+          <input type="tel" id="phone" name="phone" class="order-send__input" required>
           <p class="calculator__elements">Комментарии к заказу</p>
           <textarea class="order-send__textarea" placeholder="Например:  помыть кота, сходить за продуктами, забрать вещи из химчистки" required></textarea>
           <button type="submit" class="submit">Заказать</button>
@@ -506,6 +525,11 @@
               Привяжите банковскую карту и деньги спишутся автоматически
               после уборки, конечно только если вы остались довольны.
             </p>
+            <a href="#" class="arrow"></a>
+          </li>
+          <li class="waiting">
+            <p class="waiting__text">
+              Составляйте расписание регулярных уборок, изменяйте параметры онлайн, создавайте разовые уборки после ремонта или генеральные.</p>
           </li>
           <li class="advantages-account__item advantages-account__item--list">
             <h4 class="list-description">Создавайте свое расписание</h4>
@@ -514,6 +538,7 @@
               параметры онлайн, создавайте разовые уборки после ремонта
               или генеральные.
             </p>
+            <a href="#" class="arrow"></a>
           </li>
           <li class="advantages-account__item advantages-account__item--discount">
             <h4 class="list-description">Экономия на регулярных уборках</h4>
@@ -523,23 +548,26 @@
               заказе. Скидка суммируется
               со скидками по промокоду.
             </p>
+            <a href="#" class="arrow"></a>
           </li>
           <li class="advantages-account__item advantages-account__item--like">
             <h4 class="list-description">Добавляйте любимого клинера в избранное</h4>
             <p class="list-text">
               Выбирайте любимого клинера и добавляйте его в приоритетный список.
             </p>
+            <a href="#" class="arrow"></a>
           </li>
           <li class="advantages-account__item advantages-account__item--chat">
             <h4 class="list-description">Он-лайн чат</h4>
             <p class="list-text">
               Задайте любые вопросы прямо со страницы.
             </p>
+            <a href="#" class="arrow"></a>
           </li>
           <li class="advantages-account__item advantages-account__item--bonus">
             <h4 class="list-description">
-              <span>Приводите друзей и получите бонус</span>
-              500 рублей</h4>
+              <span>Приводите друзей и получите <b>бонус</b></span>
+              <b>500 рублей</b></h4>
             <a href="#" class="clean-link">Регистрация</a>
           </li>
         </ul>
@@ -645,19 +673,19 @@
         <h2 class="guarantees__description">О нас пишут</h2>
         <div class="reviews__users">
           <a href="">
-            <img src="" alt="">
+            <img src="http://lorempixel.com/130/55/city" alt="#">
           </a>
           <a href="">
-            <img src="" alt="">
+            <img src="http://lorempixel.com/130/55/city" alt="#">
           </a>
           <a href="">
-            <img src="" alt="">
+            <img src="http://lorempixel.com/130/55/city" alt="#">
           </a>
           <a href="">
-            <img src="" alt="">
+            <img src="http://lorempixel.com/130/55/city" alt="#">
           </a>
           <a href="">
-            <img src="" alt="">
+            <img src="http://lorempixel.com/130/55/city" alt="#">
           </a>
         </div>
         <div class="reviews__block">
@@ -711,6 +739,7 @@
     <script src="js/jquery.min.js" ></script>
     <script src="js/swiper.min.js" ></script>
     <script src="js/swiper.jquery.min.js" ></script>
+    <script src="js/jquery.maskedinput.min.js" ></script>
     <script src="js/app.js" ></script>
   </body>
 </html>
