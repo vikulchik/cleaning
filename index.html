@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
     <link rel="stylesheet" href="css/app.css">
     <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
@@ -35,7 +36,7 @@
     <main class="container">
         <div class="slider swiper-container">
             <h2 class="description">Уборка квартир</h2>
-            <ul class="slider__list swiper-wrapper">
+            <ul class="slider__list swiper-wrapper" data-cleantype="3">
                 <li class="slider__item slider__item--quick swiper-slide">
                     <h3 class="slider__description">Быстрая уборка</h3>
                     <p class="slider__text">
@@ -123,10 +124,10 @@
         </form>
         <div class="clean-list">
             <h2 class="description">Что входит в уборку</h2>
-            <div class="clean-list__view">
+            <div class="clean-list__view" data-cleantype="2">
                 <div class="clean-list__container">
                     <a href="#" class="clean-list__link active-link">Быстрая уборка</a>
-                    <div class="clean-list__section">
+                    <div class="clean-list__section  clean-list__fast">
                         <div class="clean-list__services">
                             <div class="list">
                                 <a href="#" class="clean-link active">Комнаты <span> и коридор</span></a>
@@ -205,7 +206,7 @@
                 </div>
                 <div class="clean-list__container">
                     <a href="#" class="clean-list__link">Генеральная уборка</a>
-                    <div class="clean-list__section">
+                    <div class="clean-list__section clean-list__general">
                         <div class="clean-list__services">
                             <div class="list">
                                 <a href="#" class="clean-link active">Комнаты <span> и коридор</span></a>
@@ -238,7 +239,7 @@
                 </div>
                 <div class="clean-list__container">
                     <a href="#" class="clean-list__link">Уборка после ремонта</a>
-                    <div class="clean-list__section">
+                    <div class="clean-list__section clean-list__after">
                         <div class="clean-list__services">
                             <div class="list">
                                 <a href="#" class="clean-link active">Комнаты <span> и коридор</span></a>
@@ -335,12 +336,14 @@
                         <div data-attr="5" class="rooms__count">5+ комнат</div>
                     </div>
                 </div>
-                <p class="calculator__elements">Тип уборки <a href="#" class="info">?</a></p>
-                <div class="rooms rooms__other rooms__repairs" data-cleantype="">
-                    <div class="rooms__block owl-carousel owl-theme">
-                        <div class="rooms__count rooms__count--quick">Быстрая</div>
-                        <div class="rooms__count rooms__count__main">Генеральная</div>
-                        <div class="rooms__count rooms__count--afterRepairs">После ремонта</div>
+                <div class="calculator__block">
+                    <p class="calculator__elements">Тип уборки <a href="#" class="info">?</a></p>
+                    <div class="rooms rooms__other rooms__repairs" data-cleantype="3">
+                        <div class="rooms__block bxslider">
+                            <div class="rooms__count rooms__count--quick">Быстрая</div>
+                            <div class="rooms__count rooms__count__main">Генеральная</div>
+                            <div class="rooms__count rooms__count--afterRepairs">После ремонта</div>
+                        </div>
                     </div>
                 </div>
                 <a href="#" class="clean-link">Что входит в уборку</a>
@@ -842,10 +845,10 @@
                 </div>
                 <p class="calculator__elements">Тип уборки</p>
                 <div class="rooms rooms__other">
-                    <div class="rooms__block  owl-carousel owl-theme" data-cleantype="">
-                        <div class="rooms__count">Быстрая</div>
-                        <div class="rooms__count">Генеральная</div>
-                        <div class="rooms__count">После ремонта</div>
+                    <div class="rooms__block bxslider rooms__block--next" data-cleantype="3">
+                        <div class="rooms__count rooms__count--quick">Быстрая</div>
+                        <div class="rooms__count rooms__count__main">Генеральная</div>
+                        <div class="rooms__count rooms__count--afterRepairs">После ремонта</div>
                     </div>
                 </div>
                 <a href="#" class="registration__button">Заказать</a>
@@ -983,6 +986,7 @@
 <script src="js/swiper.jquery.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
