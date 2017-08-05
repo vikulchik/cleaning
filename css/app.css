@@ -143,6 +143,7 @@ ul {
     border-radius: 4px;
     overflow: hidden;
     position: relative;
+    margin-right: 10px;
 }
 
 .slider__item:after {
@@ -153,10 +154,6 @@ ul {
     background: rgba(82, 179, 170, 0.6);
     left: 0;
     top: 0;
-}
-
-.swiper-slide-active:after {
-    display: none;
 }
 
 .swiper-slide-shadow-right,
@@ -220,9 +217,6 @@ ul {
     background: #3fb4ab;
 }
 
-.swiper-slide-active {
-    background-color: transparent;
-}
 
 .price {
     width: 65%;
@@ -536,10 +530,6 @@ ul {
     border: none;
     height: 38px;
     margin-top: 12px;
-}
-
-.active-section {
-    display: block;
 }
 
 .active-section .clean-list__link:after {
@@ -2358,6 +2348,12 @@ ul {
     left: -11px;
 }
 
-.active--slider:after {
+.active--slider:after,
+.clean-list__content {
     display: none;
+}
+
+
+.active-section {
+    display: block;
 }

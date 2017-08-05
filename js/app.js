@@ -1,24 +1,16 @@
 //Plugins
 
 $(document).ready(function () {
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
-        effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflow: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows : true
-        }
+        slidesPerView: 'auto'
     })
 });
 
-jQuery(function($){
-  $("#phone").mask("(999) 999-9999");
+jQuery(function ($) {
+    $("#phone").mask("(999) 999-9999");
 });
 
 $(document).ready(function () {
@@ -29,9 +21,20 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('.bxslider').bxSlider();
 });
+
+var goToRoomsSlider = $('.type-of-room').bxSlider({
+    minSlides: 2,
+    maxSlides: 2
+});
+
+var typeRoomsCleaning = $('.type-of-cleaning').bxSlider({
+    minSlides: 2,
+    maxSlides: 2
+});
+
 
 // End plugins
 
@@ -245,6 +248,24 @@ wrapper.on('click', function (e) {
 
 });
 
+var changeCleanTypeInCalc = function (data_rooms, slider) {
+    var activeNumber = data_rooms - 1;
+    var slideQty = slider.getSlideCount();
+
+    if (typeof data_rooms !== 'Number') {
+        data_rooms = Number(data_rooms);
+    }
+
+    if (activeNumber >= 0 && data_rooms <= slideQty) {
+        slider.goToSlide(activeNumber);
+    } else {
+        slider.goToSlide(0);
+    }
+};
+
+var dataRooms = document.querySelector('.rooms__repairs').getAttribute('data-cleantype');
+var dataRoomsCleaning = document.querySelector('.type-of-cleaning-order').getAttribute('data-cleantype');
+
 var testAttributeAccordeon = function () {
 
     var view = document.querySelector('.clean-list__view');
@@ -268,7 +289,7 @@ var testAttributeAccordeon = function () {
 };
 
 /*var testAttributeSlider = function () {
-    var slider_container = document.querySelector('.slider .swiper-wrapper');
+    var slider_container = document.querySelector('.slider__list');
     var data = Number(slider_container.getAttribute('data-cleantype'));
     var quick = document.querySelector(' .slider__item--quick');
     var main = document.querySelector('.slider__item--main');
@@ -298,54 +319,14 @@ var testAttributeAccordeon = function () {
 
 };*/
 
-var testAttributesRoomsSlider = function () {
-    var carousel_rooms = document.querySelector('.rooms__repairs');
-    var data_rooms = Number(carousel_rooms.getAttribute('data-cleantype'));
-    var rooms_slider = document.querySelector('.calculator__block .bxslider');
+var slider_list = document.querySelector('.slider__list');
 
-    if (data_rooms === 1) {
-        rooms_slider.style.transform = 'translate3d(-450px, 0px, 0px)';
-    }
-
-    if (data_rooms === 2) {
-        rooms_slider.style.transform = 'translate3d(-900px, 0px, 0px)';
-    }
-
-    if (data_rooms === 3) {
-        rooms_slider.style.transform = 'translate3d(-1350px, 0px, 0px)';
-    }
-
-};
-
-var testAttributesNextCarousel = function () {
-    var nextCarousel = document.querySelector('.rooms__block--next');
-    var data_rooms = Number(nextCarousel.getAttribute('data-cleantype'));
-    var bx_slider = document.querySelector('.orderNow__block .bxslider');
-
-    if (data_rooms === 1) {
-        bx_slider.style.transform = 'translate3d(-425.594px, 0px, 0px)';
-    }
-
-    if (data_rooms === 2) {
-        bx_slider.style.transform = 'translate3d(-851.188px, 0px, 0px)';
-    }
-
-    if (data_rooms === 3) {
-        bx_slider.style.transform = 'translate3d(-1276.78px, 0px, 0px)';
-    }
-
-};
-
-//var slider_list = document.querySelector('.slider__list');
-
-/*slider_list.addEventListener('click', function (e) {
+slider_list.addEventListener('click', function (e) {
     var target = e.target;
     e.preventDefault();
     var tab_general = document.querySelector('.clean-list__general');
     var tab_fast = document.querySelector('.clean-list__fast');
     var tab_after = document.querySelector('.clean-list__after');
-    var carousel_container = document.querySelector('.calculator__block .bxslider');
-    var bx_slider = document.querySelector('.orderNow__block .bxslider');
     var slider_quick = document.querySelector('.slider__item--quick');
     var slider_main = document.querySelector('.slider__item--main');
     var slider_after = document.querySelector('.slider__item--after');
@@ -354,38 +335,56 @@ var testAttributesNextCarousel = function () {
         tab_general.style.display = 'block';
         tab_after.style.display = 'none';
         tab_fast.style.display = 'none';
-        carousel_container.style.transform = 'translate3d(-795px, 0px, 0px)';
-        bx_slider.style.transform = 'translate3d(-780px, 0px, 0px)';
         slider_main.classList.add('active--slider');
         slider_after.classList.remove('active--slider');
         slider_quick.classList.remove('active--slider');
+        goToRoomsSlider.goToSlide(1);
+        typeRoomsCleaning.goToSlide(1);
     }
 
     if (target.classList.contains('slider__item--quick')) {
         tab_fast.style.display = 'block';
         tab_after.style.display = 'none';
         tab_general.style.display = 'none';
-        carousel_container.style.transform = 'translate3d(-530px, 0px, 0px)';
-        bx_slider.style.transform = 'translate3d(-520px, 0px, 0px)';
         slider_main.classList.remove('active--slider');
         slider_after.classList.remove('active--slider');
         slider_quick.classList.add('active--slider');
+        goToRoomsSlider.goToSlide(0);
+        typeRoomsCleaning.goToSlide(0);
     }
 
     if (target.classList.contains('slider__item--after')) {
         tab_after.style.display = 'block';
         tab_general.style.display = 'none';
         tab_fast.style.display = 'none';
-        carousel_container.style.transform = 'translate3d(-1060px, 0px, 0px)';
-        bx_slider.style.transform = 'translate3d(-1040px, 0px, 0px)';
         slider_main.classList.remove('active--slider');
         slider_after.classList.add('active--slider');
         slider_quick.classList.remove('active--slider');
+        goToRoomsSlider.goToSlide(2);
+        typeRoomsCleaning.goToSlide(2);
     }
 
-});*/
+});
 
 testAttributeAccordeon();
 //testAttributeSlider();
-testAttributesRoomsSlider();
-testAttributesNextCarousel();
+changeCleanTypeInCalc(dataRooms, goToRoomsSlider);
+changeCleanTypeInCalc(dataRoomsCleaning, typeRoomsCleaning);
+
+//Tabs
+
+var link = $(' .clean-link');
+var sliderContent = $('.clean-list__content');
+
+link.on('click', function (e) {
+    e.preventDefault();
+
+    var activeTab = $(this).attr("href");
+
+    link.removeClass('active');
+    $(this).addClass('active');
+    sliderContent.hide();
+    $(activeTab).fadeIn();
+});
+
+

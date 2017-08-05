@@ -46,7 +46,7 @@
                         в труднодоступных местах
                     </p>
                 </li>
-                <li class="slider__item slider__item--main swiper-slide  swiper-slide-active">
+                <li class="slider__item slider__item--main swiper-slide  active--slider">
                     <h3 class="slider__description">Генеральная уборка</h3>
                     <p class="slider__text">
                         Целый комплекс работ
@@ -105,7 +105,7 @@
             <h4 class="view">Количество комнат</h4>
             <div class="rooms">
                 <div class="rooms rooms__other">
-                    <div class="rooms__block owl-carousel owl-theme">
+                    <div class="rooms__block bxslider">
                         <div class="rooms__count">1 комната</div>
                         <div class="rooms__count">2 комнаты</div>
                         <div class="rooms__count">3 комнаты</div>
@@ -124,83 +124,85 @@
         </form>
         <div class="clean-list">
             <h2 class="description">Что входит в уборку</h2>
-            <div class="clean-list__view" data-cleantype="2">
+            <div class="clean-list__view" data-cleantype="">
                 <div class="clean-list__container">
                     <a href="#" class="clean-list__link active-link">Быстрая уборка</a>
                     <div class="clean-list__section  clean-list__fast">
                         <div class="clean-list__services">
                             <div class="list">
-                                <a href="#" class="clean-link active">Комнаты <span> и коридор</span></a>
-                                <a href="#" class="clean-link">Ванная <span> комната</span></a>
+                                <a href="#tabs1" class="clean-link active">Комнаты <span> и коридор</span></a>
+                                <a href="#tabs2" class="clean-link">Ванная <span> комната</span></a>
                             </div>
                             <div class="list">
-                                <a href="#" class="clean-link">Кухня</a>
-                                <a href="#" class="clean-link"><b>Доп. услуги</b><span>Дополнительные услуги</span></a>
+                                <a href="#tabs3" class="clean-link">Кухня</a>
+                                <a href="#tabs4" class="clean-link"><b>Доп. услуги</b><span>Дополнительные услуги</span></a>
                             </div>
                         </div>
-                        <div class="clean-list__content">
-                            <ul class="list-view">
-                                <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
-                                <li class="list-view__item">Пропылесосим полы</li>
-                                <li class="list-view__item">Проведем влажную уборку полов</li>
-                                <li class="list-view__item">Протираем плинтуса</li>
-                                <li class="list-view__item">Протираем пыль со всех доступных мест</li>
-                                <li class="list-view__item">Моем и протираем подоконники</li>
-                                <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
-                                </li>
-                                <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
-                                <li class="list-view__item">Уберем мусор с пола</li>
-                                <li class="list-view__item">Протрем светильники</li>
-                            </ul>
-                            <a href="#" class="clean-link more">Полный список</a>
-                        </div>
-                        <div class="clean-list__content hide">
-                            <ul class="list-view">
-                                <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
-                                <li class="list-view__item">Пропылесосим полы</li>
-                                <li class="list-view__item">Проведем влажную уборку полов</li>
-                                <li class="list-view__item">Протираем плинтуса</li>
-                                <li class="list-view__item">Протираем пыль со всех доступных мест</li>
-                                <li class="list-view__item">Моем и протираем подоконники</li>
-                                <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
-                                </li>
-                                <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
-                                <li class="list-view__item">Уберем мусор с пола</li>
-                                <li class="list-view__item">Протрем светильники</li>
-                            </ul>
-                            <a href="#" class="clean-link more">Полный список</a>
-                        </div>
-                        <div class="clean-list__content hide">
-                            <ul class="list-view">
-                                <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
-                                <li class="list-view__item">Пропылесосим полы</li>
-                                <li class="list-view__item">Проведем влажную уборку полов</li>
-                                <li class="list-view__item">Протираем плинтуса</li>
-                                <li class="list-view__item">Протираем пыль со всех доступных мест</li>
-                                <li class="list-view__item">Моем и протираем подоконники</li>
-                                <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
-                                </li>
-                                <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
-                                <li class="list-view__item">Уберем мусор с пола</li>
-                                <li class="list-view__item">Протрем светильники</li>
-                            </ul>
-                            <a href="#" class="clean-link more">Полный список</a>
-                        </div>
-                        <div class="clean-list__content hide">
-                            <ul class="list-view">
-                                <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
-                                <li class="list-view__item">Пропылесосим полы</li>
-                                <li class="list-view__item">Проведем влажную уборку полов</li>
-                                <li class="list-view__item">Протираем плинтуса</li>
-                                <li class="list-view__item">Протираем пыль со всех доступных мест</li>
-                                <li class="list-view__item">Моем и протираем подоконники</li>
-                                <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
-                                </li>
-                                <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
-                                <li class="list-view__item">Уберем мусор с пола</li>
-                                <li class="list-view__item">Протрем светильники</li>
-                            </ul>
-                            <a href="#" class="clean-link more">Полный список</a>
+                        <div class="clean-list__container">
+                            <div id="tabs1" class="clean-list__content active-section">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
+                            <div id="tabs2" class="clean-list__content">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
+                            <div id="tabs3" class="clean-list__content ">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
+                            <div id="tabs4" class="clean-list__content ">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -209,31 +211,79 @@
                     <div class="clean-list__section clean-list__general">
                         <div class="clean-list__services">
                             <div class="list">
-                                <a href="#" class="clean-link active">Комнаты <span> и коридор</span></a>
-                                <a href="#" class="clean-link">Ванная <span> комната</span></a>
+                                <a href="#tabs5" class="clean-link active">Комнаты <span> и коридор</span></a>
+                                <a href="#tabs6" class="clean-link">Ванная <span> комната</span></a>
                             </div>
                             <div class="list">
-                                <a href="#" class="clean-link">Кухня</a>
-                                <a href="#" class="clean-link"><b>Доп. услуги</b><span>Дополнительные услуги</span></a>
+                                <a href="#tabs7" class="clean-link">Кухня</a>
+                                <a href="#tabs8" class="clean-link"><b>Доп. услуги</b><span>Дополнительные услуги</span></a>
                             </div>
                         </div>
-                        <div class="clean-list__content">
-                            <ul class="list-view">
-                                <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
-                                <li class="list-view__item">Пропылесосим полы</li>
-                                <li class="list-view__item">Проведем влажную уборку полов</li>
-                                <li class="list-view__item">Протираем плинтуса</li>
-                                <li class="list-view__item">Протираем пыль со всех доступных мест</li>
-                                <li class="list-view__item">Моем и протираем подоконники</li>
-                                <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
-                                </li>
-                                <li class="list-view__item">Аккуратно сложим
-                                    вещи в стопки
-                                </li>
-                                <li class="list-view__item">Уберем мусор с пола</li>
-                                <li class="list-view__item">Протрем светильники</li>
-                            </ul>
-                            <a href="#" class="clean-link more">Полный список</a>
+                        <div class="clean-list__container">
+                            <div id="tabs5" class="clean-list__content active-section">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
+                            <div id="tabs6" class="clean-list__content">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
+                            <div id="tabs7" class="clean-list__content ">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
+                            <div id="tabs8" class="clean-list__content ">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -242,31 +292,79 @@
                     <div class="clean-list__section clean-list__after">
                         <div class="clean-list__services">
                             <div class="list">
-                                <a href="#" class="clean-link active">Комнаты <span> и коридор</span></a>
-                                <a href="#" class="clean-link">Ванная <span> комната</span></a>
+                                <a href="#tabs9" class="clean-link active">Комнаты <span> и коридор</span></a>
+                                <a href="#tabs10" class="clean-link">Ванная <span> комната</span></a>
                             </div>
                             <div class="list">
-                                <a href="#" class="clean-link">Кухня</a>
-                                <a href="#" class="clean-link"><b>Доп. услуги</b><span>Дополнительные услуги</span></a>
+                                <a href="#tabs11" class="clean-link">Кухня</a>
+                                <a href="#tabs12" class="clean-link"><b>Доп. услуги</b><span>Дополнительные услуги</span></a>
                             </div>
                         </div>
-                        <div class="clean-list__content">
-                            <ul class="list-view">
-                                <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
-                                <li class="list-view__item">Пропылесосим полы</li>
-                                <li class="list-view__item">Проведем влажную уборку полов</li>
-                                <li class="list-view__item">Протираем плинтуса</li>
-                                <li class="list-view__item">Протираем пыль со всех доступных мест</li>
-                                <li class="list-view__item">Моем и протираем подоконники</li>
-                                <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
-                                </li>
-                                <li class="list-view__item">Аккуратно сложим
-                                    вещи в стопки
-                                </li>
-                                <li class="list-view__item">Уберем мусор с пола</li>
-                                <li class="list-view__item">Протрем светильники</li>
-                            </ul>
-                            <a href="#" class="clean-link more">Полный список</a>
+                        <div class="clean-list__container">
+                            <div id="tabs9" class="clean-list__content active-section">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
+                            <div id="tabs10" class="clean-list__content">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
+                            <div id="tabs11" class="clean-list__content ">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
+                            <div id="tabs12" class="clean-list__content ">
+                                <ul class="list-view">
+                                    <li class="list-view__item">Аккуратно заправим кровать в спальне</li>
+                                    <li class="list-view__item">Пропылесосим полы</li>
+                                    <li class="list-view__item">Проведем влажную уборку полов</li>
+                                    <li class="list-view__item">Протираем плинтуса</li>
+                                    <li class="list-view__item">Протираем пыль со всех доступных мест</li>
+                                    <li class="list-view__item">Моем и протираем подоконники</li>
+                                    <li class="list-view__item">Моем зеркала и другие стеклянные поверхности (кроме окон)
+                                    </li>
+                                    <li class="list-view__item">Аккуратно сложим вещи в стопки</li>
+                                    <li class="list-view__item">Уберем мусор с пола</li>
+                                    <li class="list-view__item">Протрем светильники</li>
+                                </ul>
+                                <a href="#" class="clean-link more">Полный список</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -328,7 +426,7 @@
                 <h2 class="description calculator__description">Калькулятор</h2>
                 <p class="calculator__elements">Количество комнат <a href="#" class="info">?</a></p>
                 <div class="rooms rooms__other">
-                    <div class="rooms__block owl-carousel owl-theme">
+                    <div class="rooms__block bxslider">
                         <div data-attr="1" class="rooms__count">1 комната</div>
                         <div data-attr="2" class="rooms__count">2 комнаты</div>
                         <div data-attr="3" class="rooms__count">3 комнаты</div>
@@ -339,7 +437,7 @@
                 <div class="calculator__block">
                     <p class="calculator__elements">Тип уборки <a href="#" class="info">?</a></p>
                     <div class="rooms rooms__other rooms__repairs" data-cleantype="3">
-                        <div class="rooms__block bxslider">
+                        <div class="rooms__block type-of-room">
                             <div class="rooms__count rooms__count--quick">Быстрая</div>
                             <div class="rooms__count rooms__count__main">Генеральная</div>
                             <div class="rooms__count rooms__count--afterRepairs">После ремонта</div>
@@ -835,7 +933,7 @@
                 <h2 class="guarantees__description">Закажите уборку сейчас</h2>
                 <p class="calculator__elements">Количество комнат</p>
                 <div class="rooms rooms__other">
-                    <div class="rooms__block owl-carousel owl-theme">
+                    <div class="rooms__block bxslider">
                         <div class="rooms__count">1 комната</div>
                         <div class="rooms__count">2 комнаты</div>
                         <div class="rooms__count">3 комнаты</div>
@@ -844,11 +942,11 @@
                     </div>
                 </div>
                 <p class="calculator__elements">Тип уборки</p>
-                <div class="rooms rooms__other">
-                    <div class="rooms__block bxslider rooms__block--next" data-cleantype="3">
-                        <div class="rooms__count rooms__count--quick">Быстрая</div>
-                        <div class="rooms__count rooms__count__main">Генеральная</div>
-                        <div class="rooms__count rooms__count--afterRepairs">После ремонта</div>
+                <div class="rooms rooms__other type-of-cleaning-order"  data-cleantype="">
+                    <div class="rooms__block rooms__block--next type-of-cleaning">
+                        <div class="rooms__count">Быстрая</div>
+                        <div class="rooms__count">Генеральная</div>
+                        <div class="rooms__count">После ремонта</div>
                     </div>
                 </div>
                 <a href="#" class="registration__button">Заказать</a>
