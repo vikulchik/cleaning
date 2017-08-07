@@ -1,22 +1,5 @@
 //Plugins
 
-/*$(document).ready(function () {
-    var mySwiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflow: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows : true
-        }
-    })
-});*/
-
 jQuery(function ($) {
     $("#phone").mask("(999) 999-9999");
 });
@@ -43,9 +26,7 @@ var typeRoomsCleaning = $('.type-of-cleaning').bxSlider({
     maxSlides: 2
 });
 
-
 // End plugins
-
 
 //Accordeon
 
