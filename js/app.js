@@ -1,13 +1,21 @@
 //Plugins
 
-$(document).ready(function () {
+/*$(document).ready(function () {
     var mySwiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
+        effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
-        slidesPerView: 'auto'
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
     })
-});
+});*/
 
 jQuery(function ($) {
     $("#phone").mask("(999) 999-9999");
@@ -288,7 +296,21 @@ var testAttributeAccordeon = function () {
 
 };
 
-/*var testAttributeSlider = function () {
+var testAttributeSlider = function () {
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
     var slider_container = document.querySelector('.slider__list');
     var data = Number(slider_container.getAttribute('data-cleantype'));
     var quick = document.querySelector(' .slider__item--quick');
@@ -296,34 +318,47 @@ var testAttributeAccordeon = function () {
     var afterRepairs = document.querySelector('.slider__item--after');
 
     if (data === 1) {
-        quick.style.left = '32%';
-        quick.classList.remove('slide-bg');
-        main.classList.add('slide-bg');
-        main.style.left = 0;
+        quick.classList.add('active--slider');
+        main.classList.remove('active--slider');
+        afterRepairs.classList.remove('active--slider');
+        mySwiper.slideTo(0);
     }
 
     if (data === 2) {
-        main.style.left = '32%';
-        main.classList.remove('slide-bg');
-        quick.classList.add('slide-bg');
-        quick.style.left = 0;
+        mySwiper.slideTo(1);
+        main.classList.add('active--slider');
+        quick.classList.remove('active--slider');
+        afterRepairs.classList.remove('active--slider');
     }
 
     if (data === 3) {
-        afterRepairs.style.left = '32%';
-        afterRepairs.classList.remove('slide-bg');
-        main.classList.add('slide-bg');
-        main.style.right = '63px';
-        main.style.left = 'auto';
+        mySwiper.slideTo(2);
+        afterRepairs.classList.add('active--slider');
+        main.classList.remove('active--slider');
+        quick.classList.remove('active--slider');
     }
 
-};*/
+};
 
 var slider_list = document.querySelector('.slider__list');
 
 slider_list.addEventListener('click', function (e) {
     var target = e.target;
     e.preventDefault();
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
     var tab_general = document.querySelector('.clean-list__general');
     var tab_fast = document.querySelector('.clean-list__fast');
     var tab_after = document.querySelector('.clean-list__after');
@@ -340,6 +375,7 @@ slider_list.addEventListener('click', function (e) {
         slider_quick.classList.remove('active--slider');
         goToRoomsSlider.goToSlide(1);
         typeRoomsCleaning.goToSlide(1);
+        mySwiper.slideTo(1);
     }
 
     if (target.classList.contains('slider__item--quick')) {
@@ -351,6 +387,7 @@ slider_list.addEventListener('click', function (e) {
         slider_quick.classList.add('active--slider');
         goToRoomsSlider.goToSlide(0);
         typeRoomsCleaning.goToSlide(0);
+        mySwiper.slideTo(0);
     }
 
     if (target.classList.contains('slider__item--after')) {
@@ -362,12 +399,13 @@ slider_list.addEventListener('click', function (e) {
         slider_quick.classList.remove('active--slider');
         goToRoomsSlider.goToSlide(2);
         typeRoomsCleaning.goToSlide(2);
+        mySwiper.slideTo(2);
     }
 
 });
 
 testAttributeAccordeon();
-//testAttributeSlider();
+testAttributeSlider();
 changeCleanTypeInCalc(dataRooms, goToRoomsSlider);
 changeCleanTypeInCalc(dataRoomsCleaning, typeRoomsCleaning);
 
